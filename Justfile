@@ -48,4 +48,4 @@ build KIND="html":
 
 # Show the couch inventory
 inv-couch:
-  poetry run python -m sphinx.ext.intersphinx https://docs.couchdb.org/en/stable/objects.inv
+  .venv/bin/python -m sphinx.ext.intersphinx https://docs.couchdb.org/en/stable/objects.inv
