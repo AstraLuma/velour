@@ -13,6 +13,8 @@ author = 'CouchDB Contributors'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
+primary_domain = "std"
+
 extensions = [
     "sphinxext.opengraph",
     "sphinx_inline_tabs",
@@ -34,6 +36,7 @@ intersphinx_mapping = {
     "chaise": ("https://chaise.readthedocs.io/en/stable/", None),
 }
 
+todo_include_todos = True
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
