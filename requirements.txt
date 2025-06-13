@@ -1,0 +1,6 @@
+sphinx
+furo
+sphinxext-opengraph
+sphinx-inline-tabs
+sphinx-copybutton
+sphinxcontrib-httpdomain
