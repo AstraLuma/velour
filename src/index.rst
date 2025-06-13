@@ -6,12 +6,17 @@ Velour is a language- and environment-agnostic "specification" for rich CouchDB 
 
 By "rich", we mean clients that are more than just API wrappers. Clients that provide utilities to more robustly mutate documents, provide ORM-like declarative de/serialization, handle revision conflicts, and other concerns important for mature use of CouchDB.
 
-By "specification", we mean a set of shared concepts and some specific protocols. Conforming clients won't match exactly, but they should rhyme.
+By "specification", we mean a set of shared concepts and some specific protocols. Conforming clients won't match exactly, but they should rhyme. This makes Velour a lot more vibes-based than most technical specifications.
+
 
 .. toctree::
     :caption: Contents
     :titlesonly:
 
+    intro
+    core/index
+    features/index
+    specs/index
 
 
 Goals
