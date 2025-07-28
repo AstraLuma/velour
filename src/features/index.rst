@@ -2,9 +2,13 @@
 Client Features
 ===============
 
-.. todo::
-    
-    Declarative design documents (eg :external+chaise:doc:`prose/cli`)
+In addition to the core APIs, there are a number of optional capabilities clients may implement.
+
+.. toctree::
+    :caption: Contents
+    :titlesonly:
+
+    declarative
 
 .. todo::
     
