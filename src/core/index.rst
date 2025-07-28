@@ -80,19 +80,30 @@ Databases are the companion API container for DB-specific interactions, includin
 
         Errors if the document doesn't exist. Should error if the document is a tombstone.
 
+        :raises: Missing: 404
+        :raises: Deleted: Tombstone
+
     .. py:function:: attempt_put(doc: Document)
 
         Attempt to create or update a document (based on if the Document is new or the result of a query). Errors if there's a conflict.
 
+        :raises: Conflict: Revision to update is out of date
+
     .. py:function:: attempt_delete(doc: Document)
 
         Attempt to delete a document. Errors if there's a conflict.
+
+        :raises: Conflict: Revision to update is out of date
+        :raises: Missing: 404
 
     .. py:function:: mutate_document(doc: str|Document)
 
         Perform a retryable mutation. Unlike :py:func:`attempt_put`, this will handle conflicts.
 
         The exact form of this is highly variable based on the target environment--JavaScript might use a callback, Python might use ``for`` loops or decorators, Ruby might use blocks and ``do``.
+
+        :raises: Missing: If given a document ID, and the document doesn't exist
+        :raises: Deleted: If a tombstone is found in the process
 
     .. py:function:: list_all_docs() -> list[Document]
 
@@ -111,6 +122,14 @@ Databases are the companion API container for DB-specific interactions, includin
     .. py:function:: iter_indexes() -> list[MangoIndex]
 
         List/iterate over the mango indexes currently defined in the database.
+
+    .. py:function:: add_index(index: MangoIndex)
+
+        Create a new mango index
+
+    .. py:function:: delete_index(...)
+
+        Remove a manago index
 
 
 Session Factory
