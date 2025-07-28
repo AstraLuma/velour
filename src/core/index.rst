@@ -83,6 +83,12 @@ Databases are the companion API container for DB-specific interactions, includin
         :raises: Missing: 404
         :raises: Deleted: Tombstone
 
+    .. py:function:: reload(doc: Document)
+
+        Reload a document in place.
+
+        This is optional for implementations, since some might use immutable structures or have other restrictions.
+
     .. py:function:: attempt_put(doc: Document)
 
         Attempt to create or update a document (based on if the Document is new or the result of a query). Errors if there's a conflict.
